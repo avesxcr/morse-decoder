@@ -53,10 +53,9 @@ function decode(expr) {
     expr.forEach(function(item, index, array) {
         array[index] = MORSE_TABLE[item];
       });
-      let finalString = String(expr);
-      finalString = finalString.replace(/,,/g, ' ') 
-      finalString = finalString.replace(/,/g, '') 
-      return finalString
+    expr = String(expr).replace(/,,/g, ' ') 
+    expr = expr.replace(/,/g, '') 
+    return expr
 }
 
 module.exports = {
